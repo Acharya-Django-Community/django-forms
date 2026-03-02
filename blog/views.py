@@ -33,7 +33,7 @@ def feedback(request):
 
 def thank_you(request):
 
-    success = request.session.pop('feedback_success')
+    success = request.session.pop('feedback_success',None)
 
     if not success:
         return redirect('home')
