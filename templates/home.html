@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Barcha Postlar ro'yhati</p>
+<p>{% now 'Y M D Y:i' %}</p>
+
+{% for post in posts %}
+    <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
+{% empty %}
+    <h1>Hali 1 dona ham Post yo'q Bazada Admin paneldan Post qo'shing</h1>
+{% endfor %}
+
+
+</body>
+</html>
