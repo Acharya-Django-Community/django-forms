@@ -6,7 +6,7 @@ class FeedbackForm(forms.ModelForm):
         model = Feedback
         fields = ['name','email','message']
         widgets = {
-            'message': forms.Textarea(attrs={'rows': 4}),
+            'message': forms.Textarea(attrs={'rows': 4,'placeholder': 'Xabaringizni kiriting'}),
             'name': forms.TextInput(attrs={'placeholder': 'Ismingizni kiriting'}),
             'email': forms.EmailInput(attrs={'placeholder': 'Email kiriting'}),
         }
