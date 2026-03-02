@@ -6,7 +6,8 @@
 </head>
 <body>
 <p>Barcha Postlar ro'yhati</p>
-<p>{% now "j-F Y" %}-yil</p>
+<a href="{% url 'feedback' %}">FeedBack Yozish</a><br>
+<hr>
 {% for post in posts %}
     <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
 {% empty %}
